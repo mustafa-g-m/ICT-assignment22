@@ -1,0 +1,58 @@
+/* ========== Variables & base ========== (11.2.25)*/
+:root{
+  --bg:#f7faf7;    /*back ground color*/
+  --surface:#ffffff;   /*surface bg color*/
+  --muted:#6b7280; /*muted text color*/
+  --accent:#0f9d58;     /*primary (1st) accent color*/
+  --accent-2:#2b7a78;  /*secondary (2nd) accent color*/
+  --accent-contrast:#fff; /*accent contrast color*/
+  --max-width:1100px;
+  --gap:1.25rem;
+  --radius:12px;
+  --shadow: 0 6px 18px rgba(15,15,15,0.07);
+  --focus: 0 0 0 3px rgba(15,157,88,0.12); /*focus outline*/
+
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size:16px;
+  color: #0b1220;
+  -webkit-font-smoothing:antialiased; /*font smoothing (new thing learn more about it)*/
+}
+
+*{box-sizing:border-box}
+
+html,body{height:100%}
+
+body{           /*Simple body styles*/
+  margin:0;
+  background:var(--bg);
+  line-height:1.5;
+  color:var(--accent-2);
+}
+
+.container{
+  width:calc(100% - 2rem);    /*100% width - 2x space on sides (rem).*/
+  max-width:var(--max-width); /*width limiting in ROOT^^^^^ (lookup)*/
+  margin:0 auto;
+}
+
+/* Accessibility */
+.sr-only{                           /*S->screen R->reader only*/
+  position:absolute!important;      /*for overide*/
+  width:1px;height:1px;
+  overflow:hidden;                     /*If anything is out of the box, it'll be invisible*/
+  clip:rect(1px,1px,1px,1px);
+  white-space:nowrap;
+  border:0;
+  padding:0;
+  margin:-1px;
+}
+
+/* ========== List (Bullet points) ========== */
+ul{
+  margin:0 0 0.75rem 1.25rem;
+  padding:0;
+}
+li{
+  margin-bottom:.45rem;
+  line-height:1.45;
+}
