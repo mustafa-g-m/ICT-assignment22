@@ -232,3 +232,187 @@ li{
   max-height:150px;
   padding:.6rem .55rem;
 }
+/* ========== Contact Form ========== */
+.smart-form{
+  margin-top:1rem;
+  display:grid;
+  gap:.75rem;
+  background:var(--surface);
+  padding:1rem;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+.smart-form fieldset{border:0;margin:0;padding:0}
+.smart-form label{
+  display:block;
+  font-weight:600;
+  margin-top:.3rem;
+  color:var(--accent-2);
+}
+
+.smart-form input[type="text"],
+.smart-form input[type="email"],
+.smart-form input[type="tel"],
+.smart-form select,
+.smart-form textarea{
+  width:100%;
+  padding:.6rem .7rem;
+  border-radius:8px;
+  border:1px solid rgba(11,18,32,0.06);
+  background:transparent;
+  font-size:1rem;
+}
+
+.smart-form input:focus,        /*class is smart-form! When input is focused (clicked on- cursor )*/
+.smart-form select:focus,
+.smart-form textarea:focus{
+  outline:none;
+  box-shadow:var(--focus);
+  border-color:var(--accent);
+}
+
+/* =====  CHECKBOXES(The end one) ===== */
+.checkbox,                                  
+.radio{             /*common styles for both checkbox & radio button*/
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  margin-top:.55rem;
+  cursor:pointer;
+  user-select:none;
+  position:relative;
+}
+
+/* invisible real input */
+.checkbox input,
+.radio input{           /*to hide the real checkbox/radio button*/
+  position:absolute;
+  opacity:0;
+  inset:0;
+  cursor:pointer;
+}
+
+/* Checkbox box */
+.checkbox .box{
+  width:18px;
+  height:18px;
+  border-radius:5px;
+  border:2px solid rgba(11,18,32,0.15);
+  background:white;
+  flex-shrink:0;
+  transition:background .2s, border .2s;   /*This one is working fine*/
+}
+
+/* Checked state */
+.checkbox input:checked + .box{
+  background:linear-gradient(180deg,var(--accent),var(--accent-2));
+  border-color:transparent;
+  box-shadow:inset 0 -2px 4px rgba(0,0,0,0.12);
+}
+
+/* Radio dot */
+.radio .dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(11, 18, 32, 0.15);
+  background: white;
+  transition: 0.2s;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* Inner dot for checked state */
+.radio input:checked + .dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: var(--accent); /* your active color */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Actions */
+.form-actions{
+  display:flex;
+  gap:.5rem;
+  justify-content:flex-end;
+  margin-top:.5rem;
+}
+
+/* Modal */
+.modal-toggle{display:none}
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:60;
+}
+.modal-toggle:checked + label + .modal{
+  display:flex;
+}
+.modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(4,10,7,0.45);
+  cursor:pointer;
+}
+.modal-panel{
+  position:relative;
+  background:var(--surface);
+  padding:1rem;
+  border-radius:12px;
+  max-width:520px;
+  margin:1rem;
+  box-shadow:var(--shadow);
+}
+.modal-panel .close{
+  display:inline-block;
+  margin-top:.5rem;
+  padding:.5rem .8rem;
+  border-radius:8px;
+  background:var(--accent-2);
+  color:white;
+  cursor:pointer;
+}
+
+/* Footer */
+.site-footer{
+  padding:1rem 0;
+  border-top:1px solid rgba(11,18,32,0.05);
+  margin-top:2rem;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:1rem;
+}
+
+/* Focus */
+a:focus, button:focus, input:focus, select:focus, textarea:focus, label:focus{
+  outline:none;
+  box-shadow:var(--focus);
+}
+
+/* ========== Responsive ========== */
+@media (min-width:600px){
+  .hero-grid{grid-template-columns:1fr 420px}
+  .feature-grid{grid-template-columns:repeat(2,1fr)}
+  .plan-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:900px){
+  .header-grid{grid-template-columns:auto 1fr auto}
+  .feature-grid{grid-template-columns:repeat(3,1fr)}
+  .plan-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-copy h1{font-size:2.6rem}
+  .accordion input:checked + label + .acc-panel{
+    max-height:150px;
+  }
+}
