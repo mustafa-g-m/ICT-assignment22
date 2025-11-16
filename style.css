@@ -190,3 +190,45 @@ li{
 #tab3:checked ~ .tab-panels #panel3{
   display:block;
 }
+/* ========== Plans / Accordion ========== */
+.plans{padding:2rem 0}
+.plan-grid{
+  display:grid;
+  gap:1rem;
+  margin-top:1rem;
+}
+.plan.card{
+  padding:1rem;
+  border-radius:12px;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;        /*main axis along which the flex items are laid out. Vertically */
+  gap:.75rem;
+}
+.price{font-weight:700;color:var(--accent-2)}
+
+/* Accordion (collapsible content component) */
+.accordion input{display:none}
+
+.accordion label{
+  display:block;
+  padding:.75rem .9rem;
+  border-radius:8px;
+  background:transparent;
+  border:1px solid rgba(11,18,32,0.08);
+  cursor:pointer;
+  margin-top:.55rem;
+  font-weight:600;
+}
+
+.acc-panel{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .25s ease;
+  padding:0 .55rem;
+}
+.accordion input:checked + label + .acc-panel{
+  max-height:150px;
+  padding:.6rem .55rem;
+}
