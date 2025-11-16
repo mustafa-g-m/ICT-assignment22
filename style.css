@@ -56,3 +56,90 @@ li{
   margin-bottom:.45rem;
   line-height:1.45;
 }
+/* ========== Header ========== */
+.site-header{
+  background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9)); /*Header bg gradient! it is translucent too*/
+  position:sticky; /*If you scroll down, header stays at top*/
+  top:0;
+  z-index:40;
+  border-bottom:1px solid rgba(11,18,32,0.06);
+}
+.header-grid{
+  display:grid;                     /*CSS Grid https://www.w3schools.com/css/css_grid.asp*/
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:1rem;
+  padding:12px 0;
+}
+.brand{
+  display:flex;     /*elements from class brand & flexbo*/ 
+  align-items:center;
+  gap:.5rem;
+  text-decoration:none;
+  color:inherit;
+}
+.logo{width:60px;height:44px}           /* Adjust logo size (res fit) */
+
+.brand-name{font-weight:700;font-size:1.1rem}
+
+.main-nav ul{         /*nav that was setup for list*/
+  display:flex;
+  gap:1rem;
+  list-style:none;
+  margin:0;padding:0;
+}
+
+.main-nav a{            /*Nav links*/
+  /*font-weight:600;*/
+  text-decoration:none;
+  color:var(--muted);
+}
+
+.cta{           /*Call to action (CTA) button*/
+  background:var(--accent);
+  color:var(--accent-contrast);
+  padding:.45rem .8rem;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ========== Hero ========== */
+.hero{padding:2rem 0}       /*Vertical Spaces*/
+.hero-grid{                 /*! Col with 1rem space and centre-al*/
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1rem;
+  align-items:center;
+}
+.hero-copy h1{
+  margin:0 0 .6rem;
+  font-size:clamp(1.4rem, 3vw, 2rem);
+}
+.hero-copy p{color:var(--muted);}
+.hero-art img{              /*Image size*/
+  width:100%;height:auto;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+}
+
+/* ========== General Button(next to logo) ========== */
+/*These buttons are usually used to goto home page in a website*/
+.btn{
+  display:inline-block;
+  padding:.6rem .9rem;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  background:var(--accent-2);
+  color:white;
+}
+.btn.alt{
+  background:transparent;
+  border:2px solid var(--accent-2);
+  color:var(--accent-2);
+}
+.btn.primary{
+  background:var(--accent);
+  color:var(--accent-contrast);
+}
