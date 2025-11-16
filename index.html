@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EcoDrone — Sustainable Aerial Surveying</title>
+  <meta name="description" content="EcoDrone — eco-friendly drone surveys for agriculture and conservation. Request a demo or pre-order.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-grid">
+      <a class="brand" href="#home" aria-label="EcoDrone home">
+        <img src="logo.png" alt="EcoDrone logo" class="logo">
+        <span class="brand-name">EcoDrone</span>
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="#features">Features</a></li>    <!--Herf links to the pages! Li is used for listing! <a> is used with herf-->
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#contact">Pre-Order</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#contact">Request Demo</a> <!--CTA is the button for  Call to Action-->
+    </div>
+  </header>
+
+  <main id="home" class="site-main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">EcoDrone — Smart, Sustainable Surveying</h1>
+          <p>High-resolution, low-impact aerial surveys for agriculture, conservation, and research. Book a demo or pre-order our pilot plan.</p>
+          <p class="hero-actions">
+            <a class="btn" href="#contact">Pre-Order</a>
+            <a class="btn alt" href="#features">See Features</a>
+          </p>
+        </div>
+        <figure class="hero-art" aria-hidden="false">           <!--for the image of drone-->
+          <img src="Drone.png.png" alt="EcoDrone in field (placeholder)" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="features" class="features container" aria-labelledby="features-title">
+      <h2 id="features-title">Key Features</h2>
+      <div class="feature-grid">
+        <article class="feature">
+          <h3>Low-Noise Flight</h3>
+          <p>Minimal disturbance to wildlife and livestock with our mag-quiet rotors.</p>
+        </article>
+        <article class="feature">
+          <h3>Multispectral Sensors</h3>
+          <p>NDVI, thermal, and visual sensors for accurate crop and habitat health metrics.</p>
+        </article>
+        <article class="feature">
+          <h3>Autonomous Routes</h3>
+          <p>Plan repeating surveys from the dashboard — our flight planner handles the rest.</p>
+        </article>
+      </div>
+
+      <!-- CSS-only Tab component (interactive #1) -->
+      <div class="tabs" role="tablist" aria-label="Feature details">
+        <input type="radio" name="tabs" id="tab1" checked>
+        <label for="tab1" role="tab" tabindex="0" aria-controls="panel1">Agriculture</label>
+
+        <input type="radio" name="tabs" id="tab2">
+        <label for="tab2" role="tab" tabindex="0" aria-controls="panel2">Conservation</label>
+
+        <input type="radio" name="tabs" id="tab3">
+        <label for="tab3" role="tab" tabindex="0" aria-controls="panel3">Research</label>
+
+        <div class="tab-panels">
+          <section id="panel1" class="panel" role="tabpanel" aria-labelledby="tab1">
+            <h4>Precision Farming</h4>
+            <p>NDVI mapping, moisture indices, and field mosaics to help you optimize yields.</p>
+          </section>
+          <section id="panel2" class="panel" role="tabpanel" aria-labelledby="tab2">
+            <h4>Wildlife-Friendly</h4>
+            <p>Flight profiles minimize disturbance, and thermal sensors help locate species safely.</p>
+          </section>
+          <section id="panel3" class="panel" role="tabpanel" aria-labelledby="tab3">
+            <h4>Research-Ready</h4>
+            <p>Raw multispectral datasets for offline scientific analysis and reproducible workflows.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans" class="plans container" aria-labelledby="plans-title">
+      <h2 id="plans-title">Plans & Pricing</h2>
+      <div class="plan-grid">
+        <article class="plan card">
+          <h3>Starter</h3>
+          <p class="price">Free demo</p>
+          <ul>
+            <li>Sample flight</li>
+            <li>1 sensor package</li>
+            <li>Community support</li>
+          </ul>
+          <a class="btn" href="#contact">Select</a>
+        </article>
+
+        <article class="plan card">
+          <h3>Pro</h3>
+          <p class="price">$399 / month</p>
+          <ul>
+            <li>Weekly surveys</li>
+            <li>Multispectral bundle</li>
+            <li>Email support</li>
+          </ul>
+          <a class="btn" href="#contact">Select</a>
+        </article>
+
+        <article class="plan card">
+          <h3>Enterprise</h3>
+          <p class="price">Custom</p>
+          <ul>
+            <li>On-site training</li>
+            <li>Custom sensors</li>
+            <li>Dedicated account manager</li>
+          </ul>
+          <a class="btn" href="#contact">Contact Sales</a>
+        </article>
+      </div>
+
+      <!-- CSS-only Accordion (interactive #2) -->
+      <div class="faq" aria-labelledby="faq-title">
+        <h3 id="faq-title">FAQs</h3>
+        <div class="accordion">
+          <input type="checkbox" id="acc1">
+          <label for="acc1" tabindex="0">How long does a typical survey take?</label>
+          <div class="acc-panel">
+            <p>Small fields: ~15–25 minutes. Larger operations: configurable automated missions.</p>
+          </div>
+
+          <input type="checkbox" id="acc2">
+          <label for="acc2" tabindex="0">Are your drones compliant with local regulations?</label>
+          <div class="acc-panel">
+            <p>We provide compliant flight logs and assist with permits where applicable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container" aria-labelledby="contact-title">
+      <h2 id="contact-title">Pre-Order / Request Demo</h2>
+
+      <form class="smart-form" action="#" method="post" novalidate aria-label="Pre-order form">
+        <fieldset>
+          <legend class="sr-only">Contact information</legend>
+
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="Your full name" aria-required="true">
+
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" required placeholder="name@example.com" aria-required="true">
+
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" placeholder="+92 3XX XXX XXXX">
+
+          <label for="plan">Choose a plan</label>
+          <select id="plan" name="plan" required>
+            <option value="">Select a plan</option>
+            <option value="starter">Starter</option>
+            <option value="pro">Pro</option>
+            <option value="enterprise">Enterprise</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Interests (pick all that apply)</legend>
+          <!-- custom styled checkboxes -->
+          <div class="checkboxes">
+            <label class="checkbox">
+              <input type="checkbox" name="interest" value="agriculture">
+              <span class="box" aria-hidden="true"></span>
+              Agriculture mapping
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" name="interest" value="conservation">
+              <span class="box" aria-hidden="true"></span>
+              Conservation surveys
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" name="interest" value="research">
+              <span class="box" aria-hidden="true"></span>
+              Scientific research
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferred demo type</legend>
+          <div class="radios">
+            <label class="radio">
+              <input type="radio" name="demo" value="onsite" required>
+              <span class="dot" aria-hidden="true"></span>
+              On-site demo
+            </label>
+
+            <label class="radio">
+              <input type="radio" name="demo" value="remote">
+              <span class="dot" aria-hidden="true"></span>
+              Remote demo
+            </label>
+          </div>
+        </fieldset>
+
+        <label for="time">Preferred time slot</label>
+        <select id="time" name="time">
+          <option value="">Anytime</option>
+          <option value="morning">Morning (9–12)</option>
+          <option value="afternoon">Afternoon (12–4)</option>
+          <option value="evening">Evening (4–7)</option>
+        </select>
+
+        <label for="notes">Tell us more</label>
+        <textarea id="notes" name="notes" rows="5" placeholder="Tell us about your project, field size, equipment, or timeline."></textarea>
+
+        <label class="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          <span class="box"></span>
+          I agree to be contacted about EcoDrone services. (required)
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Submit Pre-Order</button>
+        </div>
+      </form>
+
+      <!-- CSS-only Modal (interactive #3) -->
+      <div class="modal-demo">
+        <input type="checkbox" id="open-modal" class="modal-toggle">
+        <label for="open-modal" class="btn alt">View Data Sample</label>
+
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <label for="open-modal" class="modal-backdrop" tabindex="-1"></label>
+          <div class="modal-panel">
+            <h3 id="modal-title">Multispectral Data Sample</h3>
+            <p>Download sample multispectral tiles (geotiff) for testing in QGIS.</p>
+            <p><a href="#" class="btn">Download sample</a></p>
+            <label for="open-modal" class="close" aria-label="Close dialog">Close</label>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <p>&copy; <span id="year"></span> EcoDrone — Sustainable Aerial Surveying.</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#terms">Terms</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // small non-functional nicety: set copyright year (safe, non-assignment)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
