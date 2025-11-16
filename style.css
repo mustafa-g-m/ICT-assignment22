@@ -143,3 +143,50 @@ li{
   background:var(--accent);
   color:var(--accent-contrast);
 }
+/* ========== Features  Button ========== */
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1rem;
+  margin-top:1rem;
+}
+.feature{
+  background:var(--surface);
+  padding:1.15rem;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+/* Tabs */
+.tabs{margin-top:1.25rem}
+.tabs input{display:none} /*to hide*/
+
+.tabs label{
+  display:inline-block;
+  padding:.45rem .7rem;
+  margin-right:.45rem;
+  border-radius:8px;
+  cursor:pointer;
+  border:1px solid transparent;
+}
+.tab-panels{margin-top:.75rem}
+.panel{
+  display:none;
+  padding:1rem;
+  background:var(--surface);
+  border-radius:10px;
+  box-shadow:var(--shadow);
+}
+/*Tab system,  */
+#tab1:checked ~ label[for="tab1"],
+#tab2:checked ~ label[for="tab2"],
+#tab3:checked ~ label[for="tab3"]{
+  background:var(--accent);
+  color:var(--accent-contrast);
+}
+
+#tab1:checked ~ .tab-panels #panel1,
+#tab2:checked ~ .tab-panels #panel2,
+#tab3:checked ~ .tab-panels #panel3{
+  display:block;
+}
